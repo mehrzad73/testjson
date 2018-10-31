@@ -1,8 +1,26 @@
+<!DOCTYPE html>
 <html>
-    <bod>
-        <div id="container">
-            <div id="output">nothing yet</div>
-        </div>
-        <script src="script.js"></script>
-    </bod>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON("https://jsonplaceholder.typicode.com/posts", function(result){
+         
+
+         
+                $("div").append(result[0].userId + " ");
+          
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Get JSON data</button>
+
+<div></div>
+
+</body>
 </html>
